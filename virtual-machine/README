@@ -1,0 +1,19 @@
+* Virtual Machine with a script that writes "Hello, World!" *
+* Pro/g/ramming Challenges v4.0, challenge 79 *
+=============
+
+practice-hello.as - Hello, World! Assembly file (Hand-assembled. Column 0 is address. Column 1 is converted hex. Column 2 is assembly
+practice-hello.bin - Built Hello, World! binary
+practice-vm.c - Virtual Machine
+
+Simulates an 8-bit virtual CPU. 3 registers (A, B, PC)
+
+ISA:
+0x00 - NOP - No operation
+0x01 - OUT - Output character in A register to console
+0x02 - JMP <imm8> - Jump to address
+0x03 - JEZ <imm8> - Jump to address if value in A register is zero
+0x04 - STA <imm8> - Store value in A register
+0x05 - LDB - Load value from RAM into B register. Address in A register.
+0x06 - SWP - Swap A and B registers
+0x07 - ADD - Add B to A
